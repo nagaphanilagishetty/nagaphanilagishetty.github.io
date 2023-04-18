@@ -1,15 +1,12 @@
-
 <html>
 <body>
 <h1>Embed</h1>
-<iframe id="wwiframe" src="https://ui.dev.upcp.wirewheel.io/611/welcome" width="100%" 
-height="1500px"></iframe>
+<iframe id="wwiframe" src="https://ui.demo.upcp.wirewheel.io/619/welcome" width="100%" height="1500px"></iframe>
 <script type="text/javascript">
   window.WireWheelUPCPConfig = {
-        'wwupcp_apiurl': 'https://api.dev.upcp.wirewheel.io/v2',
-        'wwupcp_apikey': 
-'eyJicmFuZElkIjoiMk9EbmN3QWlPa0JJRFFGZXpJZ2tDZTc4WDJaIiwiY2hhbm5lbElkIjoiMk9EbmxrSVFTTjBBNzBtdHczQ05pbkZFVUdhIiwidGVuYW50SWQiOiI2MjlmN2I1YTFhMDg1M2UxODRkNjhjYTEifQ==',
-        'wwupcp_cookie_domain': 'ui.dev.upcp.wirewheel.io',
+        'wwupcp_apiurl': 'https://api.demo.upcp.wirewheel.io/v2',
+        'wwupcp_apikey': 'eyJicmFuZElkIjoiMkVwMVA1aml6bzJNbHZPZnJkZ3VTTWgxRmJ2IiwiY2hhbm5lbElkIjoiMklnektBOUZDV2liWjU3WmZGamV4eXFMeE5oIiwidGVuYW50SWQiOiI2MzIzOWE3NDFjMGY3YWExYzRhMWE3MmYifQ==',
+        'wwupcp_cookie_domain': 'ui.demo.upcp.wirewheel.io',
         'wwupcp_cookie_duration': 365,
         'wwupcp_cmp_default_consents': [
            {
@@ -19,23 +16,23 @@ height="1500px"></iframe>
         ],
      };
 </script>
-<script type="text/javascript" 
-src="https://unpkg.com/@wirewheelio/cmp-javascript-sdk@0.9.1/dist/wirewheel-sdk.umd.js"></script>
-<script type="text/javascript" 
-src="https://ui.dev.upcp.wirewheel.io/extensions/upcp-sdk-bridge-1.3.1.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/@wirewheelio/cmp-javascript-sdk@0.8.5/dist/wirewheel-sdk.umd.js"></script>
+<script type="text/javascript" src="https://ui.uat.upcp.wirewheel.io/extensions/upcp-sdk-bridge-1.3.0.min.js"></script>
 <script type="text/javascript">
     // Initializes the Embedded SDK
     const { WireWheelSDK } = window.cmpJavascriptSdk
     const embeddedHandler = WireWheelSDK.initEmbeddedParent({
       targetIframe: document.getElementById("wwiframe")
     })
+
     WireWheelSDK.registerPrivacyProtocols(
   {
-    apiUrl: 'https://api.dev.upcp.wirewheel.io/v2',
-    apiKey: 'eyJicmFuZElkIjoiMk9EbmN3QWlPa0JJRFFGZXpJZ2tDZTc4WDJaIiwiY2hhbm5lbElkIjoiMk9EbmxrSVFTTjBBNzBtdHczQ05pbkZFVUdhIiwidGVuYW50SWQiOiI2MjlmN2I1YTFhMDg1M2UxODRkNjhjYTEifQ=='
+    apiUrl: 'https://api.demo.upcp.wirewheel.io/v2',
+    apiKey: 'eyJicmFuZElkIjoiMkVwMVA1aml6bzJNbHZPZnJkZ3VTTWgxRmJ2IiwiY2hhbm5lbElkIjoiMklnektBOUZDV2liWjU3WmZGamV4eXFMeE5oIiwidGVuYW50SWQiOiI2MzIzOWE3NDFjMGY3YWExYzRhMWE3MmYifQ=='
   }
 )
-   // Listen events in child application
+
+    // Listen events in child application
     embeddedHandler.on('login', (message) => {
       logMessage(message)
     })
