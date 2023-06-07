@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
     <title>CMP Modal</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <!-- Replace the src attribute value below with the URL to the modal -->
     <script type="module" src="https://api.dev.upcp.wirewheel.io/v2/lib/2QrkfU9wv8eAOqtnqMUfSSUqYKk/0.1.0/ww-upcp-modal.js"></script>
     <style>
       body {
@@ -15,8 +16,183 @@
   </head>
   <body>
     <h1>Wirewheel defaults</h1>
-    <button onclick="window.WWUPCP.openModal({position: 'top', customizations: {}})">Top</button>
-    <button onclick="window.WWUPCP.openModal({position: 'middle', customizations: {}})">Middle</button>
-    <button onclick="window.WWUPCP.openModal({position: 'bottom', customizations: {}})">Bottom</button>
+    <button onclick="window.WWUPCPModal.openModal({position: 'top', customizations: {}})">Top</button>
+    <button onclick="window.WWUPCPModal.openModal({position: 'middle', customizations: {}})">Middle</button>
+    <button onclick="window.WWUPCPModal.openModal({position: 'bottom', customizations: {}})">Bottom</button>
+
+    <h1>Customizations</h1>
+    <button
+      onclick="window.WWUPCPModal.openModal({
+        position: 'top', 
+        language: 'es', 
+        logoUrl: null,
+        customizations: {
+          container: {
+            backgroundColor: '#fefefe',
+            color: '#f40000',
+          },
+          headings: {
+            fontFamily: `'Comic Sans MS', Textile, cursive`,
+            color: '#f40000',
+          },
+          paragraphs: {
+            fontFamily: `'Comic Sans MS', Textile, cursive`,
+            color: '#f40000',
+            fontSize: '14px',
+          },
+          buttons: {
+            primary: {
+              fontFamily: `'Comic Sans MS', Textile, cursive`,
+              color: '#fefefe',
+              backgroundColor: '#f40000',
+              outlineColor: '#f40000',
+            },
+            secondary: {
+              fontFamily: `'Comic Sans MS', Textile, cursive`,
+              color: '#fefefe',
+              backgroundColor: '#f40000',
+              outlineColor: '#f40000',
+            }
+          },
+          modalHeader: {
+            color: 'white',
+            backgroundColor: '#f40000',
+          },
+          links: {
+            fontFamily: `'Comic Sans MS', Textile, cursive`,
+            color: 'darkred', 
+          },
+          checkbox: {
+            accentColor: '#f40000'
+          },
+          tables: {
+            header: {
+              backgroundColor: '#f40000',
+              color: 'white'
+            },
+            rows: {
+              backgroundColor: 'white',
+              color: '#f40000',
+              borderColor: 'rgba(240,0,0,0.3)'
+            }
+          },
+          category: {
+            color: 'red',
+          },
+          categoryHeader: {
+            color: 'darkred'
+          }
+        }
+      })"
+    >
+      Top
+    </button>
+
+    <button
+      onclick="window.WWUPCPModal.openModal({
+        position: 'middle', 
+        logoUrl: 'https://www.pepsi.com/en-us/uploads/pepsi_404.png',
+        logoAltText: 'Pepsi Logo',
+        customizations: {
+          container: {
+            fontFamily: 'Sofia Pro Black, Helvetica Neue, Helvetica, Arial, sans-serif',
+            backgroundColor: '#0065c3',
+            color: 'white',
+          },
+          buttons: {
+            primary: {
+              backgroundColor: 'white',
+              color: '#0065c3',
+              fontFamily: 'Sofia Pro Black, Helvetica Neue, Helvetica, Arial, sans-serif',
+              outlineColor: 'white',
+            },
+            secondary: {
+              backgroundColor: 'white',
+              color: '#0065c3',
+              fontFamily: 'Sofia Pro Black, Helvetica Neue, Helvetica, Arial, sans-serif',
+              outlineColor: 'white',
+            }
+          },
+          headings: { color: 'white',fontFamily: 'Sofia Pro Black, Helvetica Neue, Helvetica, Arial, sans-serif', },
+          links: { color: 'white', fontFamily: 'Sofia Pro Black, Helvetica Neue, Helvetica, Arial, sans-serif', },
+          category: {
+            backgroundColor: '#49a7ff',
+            color: '#333',
+          },
+          categoryHeader: {
+            color: '#222'
+          },
+          checkbox: {
+            accentColor: '#df1121'
+          },
+          tables: {
+            header: {
+              backgroundColor: '#0065c3'
+            },
+            rows: {
+              backgroundColor: 'white',
+              color: '#222',
+              borderColor: '#777'
+            }
+          },
+        }
+      })"
+    >
+      Middle
+    </button>
+
+    <button
+      onclick="window.WWUPCPModal.openModal({
+      hideBackground: true,
+      position: 'bottom',
+      logoUrl: null,
+      customizations: {
+        container: {
+          backgroundColor: '#f40000',
+          color: 'white',
+        },
+        buttons: {
+          primary: {
+            backgroundColor: 'white',
+            color: '#f40000',
+            outlineColor: 'white',
+          },
+          secondary: {
+            backgroundColor: 'white',
+            color: '#f40000',
+            outlineColor: 'white',
+          }
+        },
+        headings: { color: 'white' },
+        links: { color: 'white'},
+        tables: {
+          header: {
+            backgroundColor: '#f40000',
+            color: 'white'
+          },
+          rows: {
+            backgroundColor: 'white',
+            color: '#f40000',
+            borderColor: 'rgba(240,0,0,0.3)'
+          }
+        },
+        category: {
+          color: 'red',
+        },
+        categoryHeader: {
+          color: 'darkred'
+        },
+        modalHeader: {
+          color: '#f40000',
+          backgroundColor: '#fefefe',
+        },
+        checkbox: {
+          accentColor: '#f40000'
+        },
+      },
+    })"
+    >
+      Bottom
+    </button>
   </body>
 </html>
