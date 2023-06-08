@@ -16,13 +16,13 @@
   </head>
   <body>
     <h1>Wirewheel defaults</h1>
-    <button onclick="window.WWUPCPModal.openModal({position: 'top', customizations: {}})">Top</button>
-    <button onclick="window.WWUPCPModal.openModal({position: 'middle', customizations: {}})">Middle</button>
-    <button onclick="window.WWUPCPModal.openModal({position: 'bottom', customizations: {}})">Bottom</button>
+    <button onclick="window.WWUPCP.openModal({position: 'top', customizations: {}})">Top</button>
+    <button onclick="window.WWUPCP.openModal({position: 'middle', customizations: {}})">Middle</button>
+    <button onclick="window.WWUPCP.openModal({position: 'bottom', customizations: {}})">Bottom</button>
 
     <h1>Customizations</h1>
     <button
-      onclick="window.WWUPCPModal.openModal({
+      onclick="window.WWUPCP.openModal({
         position: 'top', 
         language: 'en', 
         logoUrl: null,
@@ -89,7 +89,7 @@
     </button>
 
     <button
-      onclick="window.WWUPCPModal.openModal({
+      onclick="window.WWUPCP.openModal({
         position: 'middle', 
         logoUrl: 'https://www.pepsi.com/en-us/uploads/pepsi_404.png',
         logoAltText: 'Pepsi Logo',
@@ -142,7 +142,7 @@
     </button>
 
     <button
-      onclick="window.WWUPCPModal.openModal({
+      onclick="window.WWUPCP.openModal({
       hideBackground: true,
       position: 'bottom',
       logoUrl: null,
